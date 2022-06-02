@@ -99,6 +99,111 @@
 
 //Урок 011 start of console application 
 
+// const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// const a = prompt ('Один из последних просмотренных фильмов?', ''),
+//       b = prompt ('На сколько оцените его?', ''),
+//       c = prompt ('Один из последних просмотренных фильмов?', ''),
+//       d = prompt ('На сколько оцените его?', '');
+
+//     personalMovieDB.movies[a] = b;
+//     personalMovieDB.movies[c] = d;
+
+//     console.log(personalMovieDB);
+    
+
+
+// урок 0013 Условие
+// пример 1
+
+// if (4 == 4) {
+//     console.log('0k');
+// } else { 
+//     console.log('Error');
+// }
+
+
+// пример 2
+
+// const num = 150;
+
+// if (num < 49) {
+//     console.log('Error');
+    
+// } else if (num > 100) {
+//     console.log('Много');
+// }
+// else { 
+//          console.log('ok'); 
+//      }
+
+// пример 2. другой синтаксис. с помощью тернарного оператора
+
+// const num = 50;
+// (num === 50) ? console.log('ok') : console.log('Error');
+
+
+// пример другой конструкии. Проверка только на строегое сравнение
+
+// const num = 50;
+
+// switch (num) {
+//     case 49:
+//         console.log('No');        
+//         break;
+//     case 100:
+//         console.log('Not');        
+//         break;
+//     case 50:
+//         console.log('yes');        
+//         break;
+//     default:
+//         console.log('No this time');
+//         break;
+// }
+
+
+// УРОК 0014 ЦИКЛЫ
+
+// 1 WHILE 
+
+//  let num = 5;
+
+//  while (num < 55) {
+//     console.log(num);
+//     num++;
+//  }
+
+
+// 2  ЦИКЛ DO 
+
+// let num = 50;
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55);
+
+// 3  ЦИКЛ FOR
+// let num = 50;
+// for (let i = 1; i < 8; i++) {
+//     if (i === 6) {
+//       break;  
+//     }
+//     console.log(i);
+   
+// };
+
+// УРОК 15 ЗАДАНИЯ НА ЦИКЛЫ И УСЛОВИЯ
+
 const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
@@ -109,13 +214,47 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt ('Один из последних просмотренных фильмов?', ''),
-      b = prompt ('На сколько оцените его?', ''),
-      c = prompt ('Один из последних просмотренных фильмов?', ''),
-      d = prompt ('На сколько оцените его?', '');
 
-    personalMovieDB.movies[a] = b;
-    personalMovieDB.movies[c] = d;
+    for (let i = 0; i < 2; i++) {
+        const a = prompt ('Один из последних просмотренных фильмов?', ''),
+              b = prompt ('На сколько оцените его?', '');
 
-    console.log(personalMovieDB);
-    
+            // personalMovieDB.movies[a] = b;
+  
+
+   if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+    console.log('done');
+   } else {
+    console.log('error');
+    i--;
+   }
+}
+console.log(personalMovieDB);
+
+
+// 3)
+// switch (personalMovieDB.count) {
+//     case 10:
+//         prompt ('Просмотрено довольно мало фильмов', '');
+//         break;
+//     case 30:
+//         prompt ('Вы классический зритель', '');
+//         break;
+//         default:
+//         prompt ('Произошла ошибка', '');
+//         break;
+// }
+
+if (personalMovieDB.count < 10) {
+    console.log ('Просмотрено довольно мало фильмов', '');
+
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30){
+    console.log ('Вы классический зритель');
+}
+else if (personalMovieDB.count >= 30 ){
+    console.log ('Вы киноман');
+}
+else {
+    console.log ('Произошла ошибка');
+
+}
