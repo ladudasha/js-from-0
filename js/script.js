@@ -204,57 +204,106 @@
 
 // УРОК 15 ЗАДАНИЯ НА ЦИКЛЫ И УСЛОВИЯ
 
-const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
+// const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
 
-    for (let i = 0; i < 2; i++) {
-        const a = prompt ('Один из последних просмотренных фильмов?', ''),
-              b = prompt ('На сколько оцените его?', '');
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt ('Один из последних просмотренных фильмов?', ''),
+//               b = prompt ('На сколько оцените его?', '');
 
-            // personalMovieDB.movies[a] = b;
+           
   
 
-   if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-    console.log('done');
-   } else {
-    console.log('error');
-    i--;
-   }
-}
-console.log(personalMovieDB);
+//    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//     console.log('done');
+//    } else {
+//     console.log('error');
+//     i--;
+//    }
+// }
+// console.log(personalMovieDB);
 
 
 // 3)
-// switch (personalMovieDB.count) {
-//     case 10:
-//         prompt ('Просмотрено довольно мало фильмов', '');
-//         break;
-//     case 30:
-//         prompt ('Вы классический зритель', '');
-//         break;
-//         default:
-//         prompt ('Произошла ошибка', '');
-//         break;
+
+
+// if (personalMovieDB.count < 10) {
+//     console.log ('Просмотрено довольно мало фильмов', '');
+// } 
+// else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30){
+//     console.log ('Вы классический зритель');
+// }
+// else if (personalMovieDB.count >= 30 ){
+//     console.log ('Вы киноман');
+// }
+// else {
+//     console.log ('Произошла ошибка');
 // }
 
-if (personalMovieDB.count < 10) {
-    console.log ('Просмотрено довольно мало фильмов', '');
 
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30){
-    console.log ('Вы классический зритель');
-}
-else if (personalMovieDB.count >= 30 ){
-    console.log ('Вы киноман');
-}
-else {
-    console.log ('Произошла ошибка');
 
+// let message = (personalMovieDB.count < 10) ? 'Просмотрено довольно мало фильмов' :
+//     (personalMovieDB.count >= 10 && personalMovieDB.count < 30) ? 'Вы классический зритель' :
+//         (personalMovieDB.count >= 30) ? 'Вы киноман' :
+//         'Произошла ошибка';
+
+// console.log(message);
+
+
+// const a = 3;
+// const b = 5;
+
+// switch (a + b) {
+//     case 6:
+//         console.log ('1');
+//         break;
+//     case 8:
+//         console.log ('2');
+//     case 9:
+//         console.log ('3');
+//         break;
+//     default:
+//         console.log ('4');
+        
+// }
+
+
+// УРОК 0016 ФУНКЦИИ 
+// СТРЕЛОЧНЫЕ ФУНКЦИИ
+
+let num = 20;
+function showfirstMessage(text) {
+    console.log(text); 
+    let num = 10;
+    console.log(num); 
 }
+
+showfirstMessage('hello world!');
+console.log(num);
+
+function calc(a, b) {
+    return (a + b);
+}
+
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));
+
+function ret() {
+    let num = 50;
+    ///
+
+    
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
