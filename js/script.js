@@ -77,8 +77,8 @@
 // let incr = 10;
 // let decr = 10;
 
-// incr++
-// decr--
+// incr++;
+// decr--;
 
 // console.log(++incr);
 // console.log(--decr);
@@ -279,31 +279,80 @@
 // УРОК 0016 ФУНКЦИИ 
 // СТРЕЛОЧНЫЕ ФУНКЦИИ
 
-let num = 20;
-function showfirstMessage(text) {
-    console.log(text); 
-    let num = 10;
-    console.log(num); 
-}
+// let num = 20;
+// function showfirstMessage(text) {
+//     console.log(text); 
+//     let num = 10;
+//     console.log(num); 
+// }
 
-showfirstMessage('hello world!');
-console.log(num);
+// showfirstMessage('hello world!');
+// console.log(num);
 
-function calc(a, b) {
-    return (a + b);
-}
+// function calc(a, b) {
+//     return (a + b);
+// }
 
-console.log(calc(4, 3));
-console.log(calc(5, 6));
-console.log(calc(10, 6));
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
 
-function ret() {
-    let num = 50;
-    ///
+// function ret() {
+//     let num = 50;
+    
 
     
-    return num;
-}
+//     return num;
+// }
 
-const anotherNum = ret();
-console.log(anotherNum);
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// const logger = function () {
+//     console.log('hello');
+// };
+// logger();
+
+
+// // срелочная
+
+// const culc = (a,b) => a + b;
+
+// let count = 2;
+// console.log (count++);
+// // console.log (++count);
+// console.log (count);
+
+
+
+// 017 методы и свойства строк и чисел
+
+const str = 'test';
+
+console.log(str.length);
+console.log(str.toLocaleUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
+
+const fruit = 'Some fruit';
+
+console.log(fruit.indexOf('fruit'));
+console.log(fruit.indexOf('п'));
+
+const logg = 'Hello world';
+
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, ));
+
+
+// Числа
+ const num = 12.2;
+
+ console.log (Math.round(num));
+
+ const test = '12.2px';
+ console.log(parseInt(test));
+ console.log(parseFloat(test));
+
+
